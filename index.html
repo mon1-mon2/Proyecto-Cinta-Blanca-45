@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Conejos de los Tuxtlas</title>
+    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
@@ -42,9 +43,6 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-              </li> -->
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2"Buscar" placeholder="Buscar" aria-label="Buscar">
@@ -53,21 +51,26 @@
           </div>
       </nav>
     </header>
-      <div class="jumbotron">
+      <div class="jumbotron p-3 mb-2 bg-secondary text-white mb-5">
+        <div class= "container" >
             <h1 class="display-4">Conejos de los Tuxtlas</h1>
             <p class="lead">Club de Corredores " Conejos de los Tuxtlas " A. C.</p>
             <hr class="my-4">
-            <p>“ Si quieres ser un excelente corredor, sal a correr HOY ”. . .</p>
+            <div class="d-flex justify-content-between ">
+              <p>“ Si quieres ser un excelente corredor, sal a correr HOY ”. . .</p>
+              <a class="btn btn-primary btn-lg" href="#" role="button">Información Legal</a>
+            </div>
+        </div>
       </div>
-
     <main>
-      <div class="row row-cols-1 row-cols-md-4">
+      <div class="row row-cols-1 row-cols-md-4 my-5">
         <div class="col mb-4">
           <div class="card">
             <img src="10 k.jpg" class="card-img-top" alt="10 k.jpg">
             <div class="card-body">
               <h5 class="card-title">10 k Internacional del Golfo</h5>
-              <p class="card-text">Felicidades Corredores</p>
+              <p class="card-text">"No cuentes los días, haz que los días cuenten".</p>
+              <button type="button" class="btn btn-info">Más información</button>
             </div>
           </div>
         </div>
@@ -76,7 +79,8 @@
             <img src="21 k.jpg" class="card-img-top" alt="21 k.jpg">
             <div class="card-body">
               <h5 class="card-title">Medio Maratón Puerto de Veracruz</h5>
-              <p class="card-text">Una prueba más.</p>
+              <p class="card-text">“Correr es una forma de decirle a mi cuerpo que le quiero”</p>
+              <button type="button" class="btn btn-info">Más información</button>
             </div>
           </div>
         </div>
@@ -84,8 +88,9 @@
           <div class="card">
             <img src="maraton.jpg" class="card-img-top" alt="maraton.jpg">
             <div class="card-body">
-              <h5 class="card-title">Maratón CDMX</h5>
-              <p class="card-text">Prueba Reina</p>
+              <h5 class="card-title">Maratón CDMX . . .Prueba Reina</h5>
+              <p class="card-text">“Si quieres correr, corre un kilómetro. Si quieres experimentar una vida totalmente diferente, corre un maratón.” (Emil Zatopek)</p>
+              <button type="button" class="btn btn-info">Más información</button>
             </div>
           </div>
         </div>
@@ -94,13 +99,16 @@
             <img src="trail.jpg" class="card-img-top" alt="trail.jpg">
             <div class="card-body">
               <h5 class="card-title">Trail del Conejo</h5>
-              <p class="card-text"></p>
+              <p class="card-text">“ No termines cuando estés cansado, termina cuando esté terminado ”.</p>
+              <button type="button" class="btn btn-info">Más información</button>
             </div>
           </div>
         </div>
       </div>
+      <hr />
+      <h1 class=" text-center my-5 text-success ">Si deseas ser socio del " Club Conejos de los Tuxtlas ", llena los siguientes campos :</h1>
 
-      <h2 class = "text-center">Si deseas ser Socio Honorario del Club "Conejos de los Tuxtlas", llena los siguientes campos:</h2>
+        <!-- CONTENEDOR DE LOS INPUTS -->
       <div class="container my-5">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -122,49 +130,72 @@
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Edad</span>
+            <label class="input-group-text" for="sexo">Sexo</label>
           </div>
-          <input id="edad" type="text" class="form-control" placeholder="edad" aria-label="edad" aria-describedby="basic-addon1">
+          <select class="custom-select" id="sexo">
+            <option selected disabled value="">Elige una opción...</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+          </select>
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="distancia">Distancia</label>
+            <label class="input-group-text" for="categoria">categoria</label>
           </div>
-          <select class="custom-select" id="distancia">
+          <select class="custom-select" id="categoria">
             <option selected disabled value="">Elige una opción...</option>
-            <option value="corredor">Principiante</option>
-            <option value="corredor">5 km</option>
-            <option value="corredor">10 km</option>
-            <option value="corredor">21 km</option>
-            <option value="corredor">Maratón</option>
+            <option value="principiante">principiante</option>
+            <option value="10 km">10 km</option>
+            <option value="21 km">21 km</option>
+            <option value="Maratón">Maratón</option>
           </select>
-          <button id="boton" type="button" class="btn btn-primary">inscribirse Socio Honorario</button>
         </div>
-        <!-- CONTENEDOR DE LOS INPUTS -->
-        <div class="container my-5">
-          <div class="card w-50 mx-auto"id="card">
-            <img id ="imagen" src="...." class="card-img-top" alt="corredor">
-            <div class="card-body">
-              <h5 class="card-title" id="socio" "text-center">" Bienvenido Socio Honorario "</h5>
-              <p class="card-text" id="respuestaNombre">Nombre</p>
-              <p class="card-text" id="respuestaDireccion" >dirección</p>
-              <p class="card-text" id="respuestaTelefono">Teléfono</p>
-              <p class="card-text" id="respuestaCategoria">Categoria</p>
-              <p class="card-text font-weight-bold">Gracias por preferirnos ¡¡ Felicidades Corredor !!</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+
+        <button id="boton" type="button" class="btn btn-primary">Ser socio Honorario</button>
+      </div
+
+        <!-- CONTENEDOR DE LAS CARD/RESPUESTAS -->
+      <div class="container my-5">
+        <div class="card w-50 mx-auto"id="card">
+          <div class="card-body">
+            <h5 class="card-title" id="socio">socio</h5>
+            <p class="card-text" id="respuestaNombre">Nombre</p>
+            <p class="card-text" id="respuestaDireccion" >dirección</p>
+            <p class="card-text" id=respuestaTelefono>Teléfono</p>
+            <p class="card-text font-weight-bold">solicitud Aceptada   ¡ Gracias por preferirnos !</p>
             </div>
           </div>
         </div>
+      </div>
 
     </main>
 
     <footer>
-
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Contactar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">sitio de ineterés</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"> Club de corredores " Conejos de Los Tuxtlas ", A.C.</h5>
+          <p class="card-text">Te invitamos a que nos visites.</p>
+          <p class="card-text">San Andrés Tuxtla, Veracruz.</p>
+          <a href="#" class="btn btn-primary">Visitanos</a>
+        </div>
+      </div>
+      <img src="Salto-Eyipantla-Veracruz.jpg" class="card-img-top" alt="cascada">
     </footer>
 
-
+    <script src="app.js" charset="utf-8"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
